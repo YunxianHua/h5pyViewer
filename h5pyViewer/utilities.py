@@ -29,7 +29,7 @@ class StopWatch():
   @classmethod
   def Log(cls,str=None,restart=True):
     ts=time.time()
-    print '%.6f'%(ts-cls.ts),str
+    print('%.6f' % (ts - cls.ts), str)
     if restart:
       cls.ts=ts
 
