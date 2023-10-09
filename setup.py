@@ -78,7 +78,7 @@ def getVersion():
         p = subprocess.Popen('git describe --tags --match ''v*.*'' --long', shell=True, stdout=subprocess.PIPE,
                              stderr=subprocess.STDOUT)
         retval = p.wait()
-        tag_info = p.stdout.readline()
+        tag_info = p.stdout.readline().decode()
         res = tag_info[1:-1].rsplit('-', 1)
         ver = res[0].replace('-', '.')
         gitcmt = res[1][1:]
